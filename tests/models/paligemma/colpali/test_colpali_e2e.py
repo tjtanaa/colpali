@@ -38,8 +38,8 @@ def test_e2e_retrieval_and_scoring(model_name: str):
         ]
 
         # Process the inputs
-        batch_images = processor.process_images(images).to(model.device)
-        batch_queries = processor.process_queries(queries).to(model.device)
+        batch_images = processor.process_images(images).to(model.device).to(torch.bfloat16)
+        batch_queries = processor.process_queries(queries).to(model.device).to(torch.bfloat16)
 
         # Forward pass
         with torch.no_grad():

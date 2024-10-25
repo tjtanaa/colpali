@@ -54,7 +54,7 @@ def test_forward_images(
     ]
 
     # Process the image
-    batch_images = processor.process_images(images).to(model_from_pretrained.device)
+    batch_images = processor.process_images(images).to(model_from_pretrained.device).to(torch.bfloat16)
 
     # Forward pass
     with torch.no_grad():

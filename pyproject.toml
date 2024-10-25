@@ -35,10 +35,10 @@ classifiers = [
 dependencies = [
     "GPUtil",
     "numpy<2.0.0",
-    "peft>=0.11.0,<0.12.0",
+    # "peft>=0.11.0,<0.12.0",
     "pillow>=9.2.0,<11.0.0",
     "requests",
-    "torch>=2.2.0",
+    # "torch>=2.2.0",
     "transformers>=4.45.0",
 ]
 
